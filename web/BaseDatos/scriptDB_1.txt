@@ -1,0 +1,23 @@
+CREATE database LOGIN;
+
+USE LOGIN;
+create table USUARIOJSP (
+    idusuario int not null auto_increment,
+    nombreCompleto varchar(100) not null,
+    usuario varchar(30) not null,
+    contrasena varchar(50) not null,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
+    primary key(idusuario)
+)
+
+describe USUARIOJSP;
+
+insert into USUARIOJSP(nombreCompleto,usuario,contrasena)values("Sergio Medina Chaparro","sergio2018","sergio2018");
+
+select * from USUARIOJSP;
+
+
+
+// para eliminar columnas 
+
+ALTER TABLE heroku_45299d59f23971d.usuariojsp DROP COLUMN fecha;

@@ -1,0 +1,55 @@
+Github
+
+serycamilo2019
+
+
+Camilo
+SERVIDOR == GlassFish Server 4.1.1
+1(Base login)-> 
+Documentacion
+1(login)(Camilo)https://www.youtube.com/watch?v=UuOusQXmxj8
+1.1 (CRUD HIBERNATE)https://www.youtube.com/watch?v=54usf-hXJus&t=1764s
+Camilo
+2 (Crud) https://www.youtube.com/watch?v=D3HER9EGQSI
+Repositorios claves para hacer conexiones y servicios con hibernate
+AbstractModel.java (https://github.com/duonghm56/eprojectSem4/blob/master/RadioCabs/src/java/org/group2/model/AbstractModel.java)
+HibernateUtil.java(https://gist.github.com/yusufcakmak/215ede715bab0e1d6489)
+
+pasos:
+crear la clase modelo
+creamos un controlador Cliente(servel) y tulizamos el metod (doGet)
+
+
+*****************************
+SQL
+SELECT * FROM heroku_45299d59f23971d.users;
+
+INSERT INTO users(nombreCompleto,usuario,contrasena,nivel)values('Camila Morales Chaparro', 'camila001','camila011',2);
+
+update users set contrasena = 'camila001' WHERE idusuario = 41;
+https://tomatoma.wordpress.com/manual-de-php/insertar-cambiar-y-borrar-datos-de-una-tabla-mysql/
+*****************************
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255) 
+);
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    CONSTRAINT FK_IDUSUARIO FOREIGN KEY (PersonID)
+    REFERENCES users(idusuario)
+);
+
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (ID)
+);

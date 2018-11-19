@@ -1,0 +1,25 @@
+CREATE database LOGIN;// esto es diferente por que es la que nos brinda heroku
+
+USE LOGIN;// esto es diferente por que es la que nos brinda heroku
+
+//nivel 1 administrador
+//nivel 2 otro usuario
+
+
+// donde empieza el script
+
+create table USERS (
+    idusuario int not null auto_increment,
+    nombreCompleto varchar(100) not null,
+    usuario varchar(30) not null,
+    contrasena varchar(50) not null,
+    nivel int not null,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
+    primary key(idusuario)
+)
+
+describe USERS;
+
+insert into USERS(nombreCompleto,usuario,contrasena,nivel)values("Sergio Medina Chaparro","sergio2018","sergio2018",1);
+insert into USERS(nombreCompleto,usuario,contrasena,nivel)values("Camilo Andres Yate","camilo2018","camilo2018",1);
+select * from USERS;
